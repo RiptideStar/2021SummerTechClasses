@@ -7,6 +7,7 @@
 3. No prerequisites needed, feel free to ask any questions about programming, I will share all my code for everyone on GitHub. There is no need to follow along with the unity process, so if you aren't big into the programming aspect of the game, staying for game design inspiration would be fine! Ask me anything about the game industry in general.
 
 Free for everyone. Register at http://t.ly/vcW0
+
 Zoom meeting: https://us02web.zoom.us/j/9050182961?pwd=b1FXYkFCK2RyZm5TSERrTmlCa0pWZz09
 
 ## Introduction to Artificial Intelligence Using Python
@@ -18,6 +19,7 @@ Zoom meeting: https://us02web.zoom.us/j/9050182961?pwd=b1FXYkFCK2RyZm5TSERrTmlCa
 4. No prerequisites needed, feel free to ask any questions about programming, I will share all my code for everyone to look at. Ask me anything remotely related to AI
 
 Free for everyone. Register at http://t.ly/5HYF
+
 Zoom meeting: https://us02web.zoom.us/j/9050182961?pwd=b1FXYkFCK2RyZm5TSERrTmlCa0pWZz09
 
 ## Python Programming for Web Crawling, Data Visualization and Website Creation
@@ -29,5 +31,6 @@ Zoom meeting: https://us02web.zoom.us/j/9050182961?pwd=b1FXYkFCK2RyZm5TSERrTmlCa
 3. No prerequisites, feel free to ask any questions about programming, I will share all my code for everyone to look at. Ask me anything remotely related to anything we touch on.
 
 Free for everyone. Register at http://t.ly/l6Cp
+
 Zoom meeting: https://us02web.zoom.us/j/9050182961?pwd=b1FXYkFCK2RyZm5TSERrTmlCa0pWZz09
 
