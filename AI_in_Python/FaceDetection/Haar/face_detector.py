@@ -1,6 +1,6 @@
 import cv2 #pip install opencv-python
 
-trained_face_data = cv2.CascadeClassifier('haarcascade_frontal_default.xml')
+trained_face_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 #choose an image file
 img = cv2.imread('federer.jpg')
