@@ -20,6 +20,24 @@ public class Rock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(0, 0, randomRotationSpeed * Time.deltaTime);
+        transform.position += new Vector3(randomDirectionX * movementSpeed * Time.deltaTime, randomDirectionY * movementSpeed 
+            * Time.deltaTime, 0);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        // Debug.Log("HIT!"); 
+        if (other.gameObject.GetComponent<Bullet>() || other.gameObject.GetComponent<Ship>())
+        {
+            //destroy both this rock and the other gameobject (which is a ship or bullet)
+            Destroy(other.gameObject);
+            Explode();
+        }
+    }
+
+    void Explode()
+    {
+        Destroy(this.gameObject);
     }
 }
