@@ -2,6 +2,7 @@ import requests
 import sys
 from bs4 import BeautifulSoup #html parser
 import xlwt
+import sqlite3
 
 
 print("--- Command Line:", sys.argv)
@@ -75,3 +76,71 @@ def save_to_excel(datalist):
 
 # save_to_excel(datalist)
 
+
+def create_table(name):
+    conn = sqlite3.connect(name)
+    c = conn.cursor()
+
+    sql = '''
+        create table autism_unis
+        (
+            id integer primary key autoincrement,
+            univ_name varchar,
+            location varchar,
+            ranking integer,
+            description text,
+            url text,
+            source_url text,
+            misc text
+        )
+    '''
+
+    c.execute(sql)
+    conn.commit()
+    conn.close()
+
+# create_table("autism_universities.db")
+
+def select_data_db(name):
+    conn = sqlite3.connect(name)
+    c = conn.cursor()
+
+    sql = '''
+        SELECT *
+        FROM autism_unis
+    '''
+
+    c.execute(sql)
+
+    result = c.fetchall()
+    print(result)
+
+    conn.close()
+    return result
+
+database_results = select_data_db("autism_universities.db")
+
+def insert_into_database(datalist, name):
+    conn = sqlite3.connect(name)
+    c = conn.cursor()
+
+    for data in datalist:
+        for index in range(len(data)):
+            if index == 2:
+                continue
+            data[index] = '"' + data[index] + '"'
+
+        sql = '''
+            insert into autism_unis
+            (
+                univ_name, location, ranking, description, url, source_url
+            )
+            values (?, ?, ?, ?, ?, ?)
+        '''
+
+        c.execute(sql, (data[0], data[1], data[2], data[3], data[4], data[5]))
+        conn.commit()
+    c.close()
+    conn.close()
+
+# insert_into_database(datalist, "autism_universities.db")
