@@ -9,6 +9,13 @@ public class Rock : MonoBehaviour
     float randomDirectionY;
     float randomRotationSpeed;
 
+    private MainLogic mainRef;
+
+    public MainLogic MainRef
+    {
+        set { mainRef = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +45,8 @@ public class Rock : MonoBehaviour
 
     void Explode()
     {
+        mainRef.updateScore(1);
+        mainRef.rocks.Remove(this);
         Destroy(this.gameObject);
     }
 }
