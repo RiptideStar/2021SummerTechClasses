@@ -143,4 +143,4 @@ def insert_into_database(datalist, name):
     c.close()
     conn.close()
 
-# insert_into_database(datalist, "autism_universities.db")
+insert_into_database(datalist, "autism_universities.db")
