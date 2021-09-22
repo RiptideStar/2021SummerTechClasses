@@ -1,7 +1,7 @@
 import requests  #pip install requests
 
 def classify(numbers):
-    key = "db45b470-e4c9-11eb-8ead-79e929ab5b4e38d54c3a-1b70-4695-bde7-c0721566a49f"
+    key = "51b06160-1bbf-11ec-937e-13c7908e24d50fb9f919-aaab-4565-ad12-54e89b8fdd1a"
     url = "https://machinelearningforkids.co.uk/api/scratch/" + key + "/classify"
 
     response = requests.post(url, json={"data": numbers})
@@ -13,13 +13,13 @@ def classify(numbers):
     else:
         response.raise_for_status()
 
-data1 = 2           #ticket class
-data2 = "male"
-data3 = 7           #age
-data4 = 1           #sibling
-data5 = 0           #parental units/childrenal units
-data6 = 200           #ticket fare
-data7 = "Cherbourg" #location embarked
+data1 = 2               #ticket class
+data2 = "male"          #gender
+data3 = 7               #age
+data4 = 1               #sibling
+data5 = 0               #parental units/childrenal units
+data6 = 200             #ticket fare
+data7 = "Cherbourg"     #location embarked
 
 test_data = [ data1, data2, data3, data4, data5, data6, data7 ]
 
