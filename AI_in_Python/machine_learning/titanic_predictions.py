@@ -1,7 +1,7 @@
 import requests  #pip install requests
 
 def classify(numbers):
-    key = "51b06160-1bbf-11ec-937e-13c7908e24d50fb9f919-aaab-4565-ad12-54e89b8fdd1a"
+    key = "7e63dcd0-1be4-11ec-8582-95bb29bbfa717727002d-ae9d-481e-b1f5-886059dcbc5d"
     url = "https://machinelearningforkids.co.uk/api/scratch/" + key + "/classify"
 
     response = requests.post(url, json={"data": numbers})
